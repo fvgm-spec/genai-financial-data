@@ -1,0 +1,34 @@
+# Data Generation Configuration
+generation:
+  customers:
+    min: 10    # Minimum number of customers to generate
+    max: 100   # Maximum number of customers to generate
+  assets:
+    min: 5     # Minimum number of assets to generate
+    max: 20    # Maximum number of assets to generate
+  transactions:
+    min: 50    # Minimum number of transactions to generate
+    max: 500   # Maximum number of transactions to generate
+
+# S3 Storage Configuration
+s3:
+  bucket_name: ${S3_BUCKET_NAME}  # Environment variable for S3 bucket name
+  region: ${AWS_REGION}  # Environment variable for AWS region
+  credentials:
+    access_key_id: ${AWS_ACCESS_KEY_ID}  # Environment variable for AWS access key
+    secret_access_key: ${AWS_SECRET_ACCESS_KEY}  # Environment variable for AWS secret key
+  storage:
+    local_output_dir: "data"  # Base directory for local file storage
+    date_format: "%Y-%m-%d"   # Format for timestamp in filenames
+    file_pattern: "${name}_${timestamp}.csv"  # Pattern for generated filenames
+  paths:
+    customers: "financial-data/customers"      # Base paths organized by data type
+    assets: "financial-data/assets"
+    transactions: "financial-data/transactions"
+    portfolios: "financial-data/portfolios"
+
+# Data Generation Parameters
+generation:
+  customers: 1000
+  assets: 100
+  transactions: 5000
