@@ -22,10 +22,10 @@ s3:
     date_format: "%Y-%m-%d"   # Format for timestamp in filenames
     file_pattern: "${name}_${timestamp}.csv"  # Pattern for generated filenames
   paths:
-    customers: "financial-data/customers"      # Base paths organized by data type
-    assets: "financial-data/assets"
-    transactions: "financial-data/transactions"
-    portfolios: "financial-data/portfolios"
+    customers: "financial-data2325/customers"      # Base paths organized by data type
+    assets: "financial-data2325/assets"
+    transactions: "financial-data2325/transactions"
+    portfolios: "financial-data2325/portfolios"
 
 # Data Generation Parameters
 generation:
