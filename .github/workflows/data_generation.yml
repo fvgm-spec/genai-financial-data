@@ -15,10 +15,10 @@ jobs:
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.8'
 
@@ -31,8 +31,8 @@ jobs:
       run: python src/datagen.py
 
     - name: Archive local data
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
-        name: financial-data
+        name: financial-data2325
         path: data/
         retention-days: 7
